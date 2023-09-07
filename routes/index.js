@@ -20,7 +20,7 @@ function checkPalindrome(phrase){
   let temp = phrase.split("");
   temp = temp.reverse();
   temp = temp.join("")
-  if (phrase.toLowerCase().replace(" ", "") === temp.toLowerCase().replace(" ", "") ){
+  if (phrase.toLowerCase().replace(" ", "").replace(".", "").replace("!", "").replace(",", "").replace(":", "").replace(";", "").replace("?", "").replace("'", "").replace("  ", "") === temp.toLowerCase().replace(" ", "").replace( ".", "").replace( "!", "").replace( ",", "").replace(":", "").replace(";", "").replace("?", "")){
     return true
   }
   else {
